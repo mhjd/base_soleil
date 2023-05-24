@@ -38,7 +38,9 @@ void draw(void) {
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   glUseProgram(_pId);
   glUniform1f(glGetUniformLocation(_pId, "weight"), 1.1);
-  glUniform1f(glGetUniformLocation(_pId, "zoom"), 5.5f);
+  /* glUniform1f(glGetUniformLocation(_pId, "zoom"), 5.5f); */
+  /* glUniform1f(glGetUniformLocation(_pId, "zoom"), 35.5f); */
+  glUniform1f(glGetUniformLocation(_pId, "zoom"), 35.5f);
   useNoiseTextures(_pId, 0);
   gl4dgDraw(_sphereId);
   unuseNoiseTextures(0);

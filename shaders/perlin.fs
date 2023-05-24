@@ -560,7 +560,7 @@ void main(void) {
   /* bvec4 myres = lessThan(mycolor, vec4(0.0, 0.0, 0.0, 0.0)) ; */
   float n, A = 1.0, mf = 1.0;
   
-  for (int i = 0; i < 5; ++i){
+  for (int i = 0; i < 4; ++i){
     n += A * noise(tcoord * zoom * mf);
     A = A/2.0;
     mf = mf * 2.0;
@@ -569,9 +569,9 @@ void main(void) {
   vec4 mycolor = vec4(n);
   if (mycolor[0] < 0.1  && mycolor[1] < 0.1 && mycolor[2] < 0.1){
     
-    fragColor = vec4(0.0, 0.0, 1.0, 1.0)+ mycolor;
+    fragColor = vec4(1.0, 0.3, 0.0, 1.0)+ mycolor;
   } else {
-    fragColor = vec4(0.0, 1.0, 0.0, 1.0) + mycolor;
+    fragColor = vec4(1.0, 0.5, 0.0, 1.0) + mycolor;
     
   }
 }
